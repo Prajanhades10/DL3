@@ -33,9 +33,9 @@ Evaluate the model using the test dataset and visualize the results (accuracy, c
 
 ## PROGRAM
 
-### Name:GOWTHAM G T
+### Name:PRAJAN.SS
 
-### Register Number:212224110017
+### Register Number:212224230201
 ```
 import torch as t
 import torch.nn as nn
@@ -89,8 +89,8 @@ if t.cuda.is_available():
   device=t.device("cuda")
   model.to(device)
 
-print("Name: GOWTHAM G T")
-print("Reg.no: 212224110017")
+print("Name: PRAJAN.SS")
+print("Reg.no: 212224230201")
 summary(model,input_size=(1,28,28))
 
 criterion=nn.CrossEntropyLoss()
@@ -109,8 +109,8 @@ def train_model(model,train_loader,num_epochs):
       loss.backward()
       optimizer.step()
       running_loss+=loss.item()
-    print(f"Name: GOWTHAM G T")
-    print(f"Reg.no: 212224110017")
+    print(f"Name: PRAJAN.SS")
+    print(f"Reg.no: 212224230201")
     print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}")
 
 train_model(model,train_loader,num_epochs=10)
@@ -134,8 +134,8 @@ def test_model(model, test_loader):
       all_labels.extend(labels.cpu().numpy())
 
   accuracy = correct/total
-  print("Name: GOWTHAM G T")
-  print("Reg.no: 212224110017")
+  print("Name: PRAJAN.SS")
+  print("Reg.no: 212224230201")
   print(f"Test Accuracy: {accuracy:.4f}")
 
   cm = confusion_matrix(all_labels, all_preds)
@@ -146,8 +146,8 @@ def test_model(model, test_loader):
   plt.title(f"Confusion Matrix\nGOWTHAM G T - 212224110017")
   plt.show()
 
-  print("Name: GOWTHAM G T")
-  print("Reg.no: 212224110017")
+  print("Name: PRAJAN.SS")
+  print("Reg.no: 212224230201")
   print("Classification Report:")
   print(classification_report(all_labels, all_preds, target_names=[str(i) for i in range(10)]))
 
@@ -164,8 +164,8 @@ def predict_image(model,image_index,dataset):
     _,predicted=t.max(output,1)
   class_names=[str(i) for i in range(10)]
   
-  print("Name: GOWTHAM G T")
-  print("Reg.no: 212224110017")
+  print("Name: PRAJAN.SS")
+  print("Reg.no: 212224230201")
   plt.imshow(image.cpu().squeeze(0),cmap='gray')
   plt.title(f"Actual: {class_names[label]}\nPredicted: {class_names[predicted.item()]}")
   plt.axis("off")
@@ -177,7 +177,8 @@ predict_image(model,image_index=80,dataset=test_dataset)
 ### OUTPUT
 
 ## Training Loss per Epoch
-<img width="1262" height="733" alt="GOOFY2" src="https://github.com/user-attachments/assets/f1f5ebde-f8f0-4df3-bb6f-bc4a853a34f2" />
+
+<img width="361" height="195" alt="Screenshot From 2026-05-14 14-43-35" src="https://github.com/user-attachments/assets/a4706182-d175-4528-9aa0-6860b7e26ee3" />
 
 
 
@@ -187,8 +188,10 @@ predict_image(model,image_index=80,dataset=test_dataset)
 
 
 ## Classification Report
-<img width="846" height="446" alt="Screenshot 2026-05-12 140955" src="https://github.com/user-attachments/assets/98694ca4-5172-4f42-8a0a-5cd7fff9a313" />
-<img width="1116" height="837" alt="GOOFY" src="https://github.com/user-attachments/assets/a0d4a35d-4264-4f16-aca0-e5730fd94d56" />
+<img width="805" height="365" alt="Screenshot From 2026-05-14 14-41-08" src="https://github.com/user-attachments/assets/972192c5-ebc3-48bb-8e92-22b397d01b5e" />
+<img width="819" height="392" alt="Screenshot From 2026-05-14 14-39-00" src="https://github.com/user-attachments/assets/4265e004-07b9-4d80-9057-1fffd2a8fd47" />
+
+
 
 
 ### New Sample Data Prediction
